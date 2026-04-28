@@ -8,27 +8,31 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Helvetica Neue", Arial, sans-serif;
     background: #fff;
     color: #111;
 }
 
 /* 顶部导航 */
 .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
-    font-weight: bold;
-    position: fixed;
-    width: 100%;
-    background: rgba(255,255,255,0.9);
-    backdrop-filter: blur(5px);
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+    z-index: 10;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
-/* HERO */
+/* HERO 主图 */
 .hero {
     position: relative;
-    height: 90vh;
+    height: 95vh;
+    overflow: hidden;
 }
 
 .hero img {
@@ -37,39 +41,53 @@ body {
     object-fit: cover;
 }
 
+/* 渐变遮罩（关键高级感🔥） */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1));
+}
+
+/* 主图文字 */
 .hero-text {
     position: absolute;
+    bottom: 15%;
     left: 8%;
-    bottom: 20%;
     color: white;
+    z-index: 2;
+    max-width: 400px;
 }
 
 .hero-text h1 {
-    font-size: 48px;
+    font-size: 56px;
+    font-weight: 600;
     margin: 0;
+    line-height: 1.1;
 }
 
 .hero-text p {
-    margin-top: 10px;
-    opacity: 0.8;
+    margin-top: 15px;
+    opacity: 0.85;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 25px;
+    margin-top: 20px;
+    padding: 12px 30px;
     background: white;
     color: black;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 1px;
 }
 
 /* 商品区 */
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding: 80px 40px;
+    gap: 40px;
+    padding: 100px 60px;
 }
 
 .card {
@@ -99,10 +117,10 @@ body {
     opacity: 0;
 }
 
-/* 文案 */
+/* 商品文字 */
 .title {
-    margin-top: 10px;
-    font-size: 14px;
+    margin-top: 12px;
+    font-size: 15px;
 }
 
 .price {
@@ -117,37 +135,37 @@ body {
 
 <!-- 顶部 -->
 <div class="header">
-    <div>JW Studio</div>
-    <div>Collection</div>
+    <div>JW STUDIO</div>
+    <div>COLLECTION</div>
 </div>
 
-<!-- 首图 -->
+<!-- 主图 -->
 <div class="hero">
-    <img src="hero2.jpg">
+    <img src="hero2.png">
     <div class="hero-text">
         <h1>98 One Shoulder Tee</h1>
-        <p>Simple. Clean. Effortless Style.</p>
-        <a href="#collection" class="btn">Shop Now</a>
+        <p>Clean fit. Soft feel. Everyday style.</p>
+        <a href="#collection" class="btn">SHOP NOW</a>
     </div>
 </div>
 
 <!-- 商品 -->
 <div id="collection" class="grid">
 
-    <!-- 产品1 -->
+    <!-- 商品1 -->
     <div class="card">
         <img src="p1-a.png" class="main">
         <img src="p1-b.png" class="hover">
         <div class="title">One Shoulder Tee</div>
-        <div class="price">Rp79.000</div>
+        <div class="price">Rp129.000</div>
     </div>
 
-    <!-- 产品2 -->
+    <!-- 商品2 -->
     <div class="card">
         <img src="p2-a.png" class="main">
         <img src="p2-b.png" class="hover">
         <div class="title">Street Graphic Tee</div>
-        <div class="price">Rp99.000</div>
+        <div class="price">Rp139.000</div>
     </div>
 
 </div>
