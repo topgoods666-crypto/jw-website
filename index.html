@@ -7,194 +7,220 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#fffaf5] text-[#1f1f1f]">
+<body class="bg-white text-[#1f1f1f]">
 
-<header class="fixed top-0 left-0 w-full z-50 bg-[#fffaf5]/90 backdrop-blur border-b border-[#eadfd4]">
-  <div class="flex justify-between items-center px-5 md:px-12 py-4">
-    <div class="text-xl font-black tracking-wide">JW STUDIO</div>
-    <nav class="flex gap-5 text-xs md:text-sm uppercase tracking-widest">
-      <a href="#collection">Collection</a>
+<!-- TOP NAV -->
+<header class="sticky top-0 z-50 bg-white border-b border-gray-100">
+  <div class="h-16 px-5 md:px-10 flex items-center justify-between">
+    <div class="text-2xl font-black tracking-tight">JW STUDIO</div>
+
+    <nav class="hidden md:flex gap-9 text-xs uppercase tracking-widest font-semibold">
+      <a href="#newin">New In</a>
+      <a href="#collection">Clothing</a>
       <a href="#lookbook">Lookbook</a>
       <a href="#about">About</a>
     </nav>
+
+    <div class="flex gap-4 text-xl">
+      <span>⌕</span>
+      <span>♡</span>
+      <span>🛍</span>
+    </div>
   </div>
 </header>
 
-<section class="pt-24 px-5 md:px-12">
-  <div class="grid md:grid-cols-2 gap-8 items-center min-h-[85vh]">
+<!-- HERO -->
+<section class="grid md:grid-cols-2 min-h-[78vh] bg-[#f7f1eb]">
+  <div class="flex flex-col justify-center px-7 md:px-20 py-20">
+    <p class="text-xs uppercase tracking-[0.35em] mb-5 text-[#9b765a]">Daily Fashion</p>
+    <h1 class="text-5xl md:text-7xl leading-none font-serif mb-6">
+      Fresh Fit.<br>
+      Soft Detail.<br>
+      Daily Style.
+    </h1>
+    <p class="text-gray-600 max-w-md mb-8 leading-relaxed">
+      Koleksi kaos wanita untuk gaya harian perempuan muda Indonesia.
+      Simple, nyaman, dan mudah dipadukan.
+    </p>
+    <a href="#newin" class="w-fit bg-black text-white px-8 py-4 text-xs uppercase tracking-widest">
+      Shop Collection →
+    </a>
+  </div>
+
+  <div class="relative overflow-hidden min-h-[520px]">
+    <img src="images/p6-b.jpg" class="w-full h-full object-cover" />
+  </div>
+</section>
+
+<!-- BENEFIT BAR -->
+<section class="grid grid-cols-2 md:grid-cols-4 border-y border-gray-100 text-xs uppercase tracking-widest">
+  <div class="py-5 text-center">Premium Cotton</div>
+  <div class="py-5 text-center border-l border-gray-100">Oversized Fit</div>
+  <div class="py-5 text-center border-l border-gray-100">Easy To Style</div>
+  <div class="py-5 text-center border-l border-gray-100">Made For Daily</div>
+</section>
+
+<!-- NEW IN -->
+<section id="newin" class="px-5 md:px-10 py-14">
+  <div class="flex items-end justify-between mb-7">
     <div>
-      <p class="text-xs uppercase tracking-[0.35em] text-[#b88c63] mb-5">Daily Fashion Indonesia</p>
-      <h1 class="text-5xl md:text-7xl font-black leading-none mb-6">
-        Fresh Look.<br>
-        Easy Style.<br>
-        Everyday Tee.
-      </h1>
-      <p class="text-gray-600 max-w-md mb-8">
-        Koleksi kaos wanita dengan gaya simple, clean, dan stylish untuk aktivitas harian, nongkrong, kampus, dan konten TikTok.
+      <h2 class="text-2xl md:text-3xl font-semibold uppercase tracking-wide">New In</h2>
+      <p class="text-sm text-gray-500 mt-2">Hover foto untuk melihat look kedua.</p>
+    </div>
+    <a href="#collection" class="text-xs uppercase tracking-widest border-b border-black">View All</a>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-5">
+
+    <!-- PRODUCT 1 -->
+    <div class="group">
+      <div class="relative aspect-[3/4] overflow-hidden bg-[#f7f2ec]">
+        <img src="images/p1-a.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+        <img src="images/p1-b.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      </div>
+      <div class="pt-3">
+        <h3 class="text-xs md:text-sm font-semibold uppercase">Leopard 98 Tee</h3>
+        <p class="text-sm text-gray-500 mt-1">IDR 159.000</p>
+      </div>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="group">
+      <div class="relative aspect-[3/4] overflow-hidden bg-[#f7f2ec]">
+        <img src="images/p2-a.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+        <img src="images/p2-b.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      </div>
+      <div class="pt-3">
+        <h3 class="text-xs md:text-sm font-semibold uppercase">Vintage Moment Tee</h3>
+        <p class="text-sm text-gray-500 mt-1">IDR 159.000</p>
+      </div>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="group">
+      <div class="relative aspect-[3/4] overflow-hidden bg-[#f7f2ec]">
+        <img src="images/p3-a.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+        <img src="images/p3-b.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      </div>
+      <div class="pt-3">
+        <h3 class="text-xs md:text-sm font-semibold uppercase">Dark Washed Tee</h3>
+        <p class="text-sm text-gray-500 mt-1">IDR 159.000</p>
+      </div>
+    </div>
+
+    <!-- PRODUCT 4 -->
+    <div class="group">
+      <div class="relative aspect-[3/4] overflow-hidden bg-[#f7f2ec]">
+        <img src="images/p4-a.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+        <img src="images/p4-b.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      </div>
+      <div class="pt-3">
+        <h3 class="text-xs md:text-sm font-semibold uppercase">Butterfly Back Tee</h3>
+        <p class="text-sm text-gray-500 mt-1">IDR 159.000</p>
+      </div>
+    </div>
+
+    <!-- PRODUCT 5 -->
+    <div class="group">
+      <div class="relative aspect-[3/4] overflow-hidden bg-[#f7f2ec]">
+        <img src="images/p5-a.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+        <img src="images/p5-b.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      </div>
+      <div class="pt-3">
+        <h3 class="text-xs md:text-sm font-semibold uppercase">Red Flower Tee</h3>
+        <p class="text-sm text-gray-500 mt-1">IDR 159.000</p>
+      </div>
+    </div>
+
+    <!-- PRODUCT 6 -->
+    <div class="group">
+      <div class="relative aspect-[3/4] overflow-hidden bg-[#f7f2ec]">
+        <img src="images/p6-a.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+        <img src="images/p6-b.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      </div>
+      <div class="pt-3">
+        <h3 class="text-xs md:text-sm font-semibold uppercase">White Leopard Tee</h3>
+        <p class="text-sm text-gray-500 mt-1">IDR 159.000</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COLLECTION BANNER -->
+<section id="collection" class="px-5 md:px-10 py-10">
+  <div class="grid md:grid-cols-2 gap-5 items-center bg-[#faf4ee]">
+    <div class="p-8 md:p-14">
+      <p class="text-xs uppercase tracking-[0.35em] text-[#9b765a] mb-4">Collection</p>
+      <h2 class="text-4xl md:text-5xl font-serif mb-5">Soft Streetwear for Everyday.</h2>
+      <p class="text-gray-600 leading-relaxed">
+        Dirancang untuk tampilan santai, feminin, dan tetap stylish.
+        Cocok untuk hangout, kampus, cafe, dan konten OOTD.
       </p>
-      <a href="#collection" class="inline-block bg-[#1f1f1f] text-white px-8 py-4 text-xs uppercase tracking-widest">
-        View Collection
-      </a>
     </div>
-
-    <div class="grid grid-cols-2 gap-4">
-      <div class="rounded-3xl overflow-hidden bg-white shadow-sm">
-        <img src="images/p6.jpg" class="w-full h-full object-cover">
-      </div>
-      <div class="rounded-3xl overflow-hidden bg-white shadow-sm mt-12">
-        <img src="images/p5.jpg" class="w-full h-full object-cover">
-      </div>
-    </div>
+    <img src="images/p5-b.jpg" class="w-full h-[520px] object-cover" />
   </div>
 </section>
 
-<section class="bg-[#f1e6dc] py-4 overflow-hidden">
-  <div class="whitespace-nowrap text-sm md:text-xl font-bold tracking-widest text-[#6b4b35]">
-    SOFT STREET STYLE · DAILY WEAR · INDONESIAN GIRLS · SIMPLE OUTFIT · CLEAN LOOK ·
-  </div>
-</section>
-
-<section id="collection" class="px-5 md:px-12 py-20">
-  <div class="text-center mb-12">
-    <p class="text-xs uppercase tracking-[0.35em] text-[#b88c63] mb-3">New Collection</p>
-    <h2 class="text-4xl md:text-5xl font-black">Fresh Daily Tee</h2>
-    <p class="text-gray-500 mt-4">Satu kaos, banyak gaya.</p>
-  </div>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7">
-
-    <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
-      <div class="aspect-[4/5] bg-[#f5eee7]">
-        <img src="images/p1.jpg" class="w-full h-full object-cover">
-      </div>
-      <div class="p-5">
-        <h3 class="font-black">Black Leopard 98 Tee</h3>
-        <p class="text-sm text-gray-500">Bold print · street feminine</p>
-      </div>
-    </div>
-
-    <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
-      <div class="aspect-[4/5] bg-[#f5eee7]">
-        <img src="images/p2.jpg" class="w-full h-full object-cover">
-      </div>
-      <div class="p-5">
-        <h3 class="font-black">Vintage Moment Tee</h3>
-        <p class="text-sm text-gray-500">Washed look · cool daily style</p>
-      </div>
-    </div>
-
-    <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
-      <div class="aspect-[4/5] bg-[#f5eee7]">
-        <img src="images/p3.jpg" class="w-full h-full object-cover">
-      </div>
-      <div class="p-5">
-        <h3 class="font-black">Dark Washed Tee</h3>
-        <p class="text-sm text-gray-500">Minimal · oversized fit</p>
-      </div>
-    </div>
-
-    <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
-      <div class="aspect-[4/5] bg-[#f5eee7]">
-        <img src="images/p4.jpg" class="w-full h-full object-cover">
-      </div>
-      <div class="p-5">
-        <h3 class="font-black">Sky Blue Butterfly Tee</h3>
-        <p class="text-sm text-gray-500">Fresh color · soft statement</p>
-      </div>
-    </div>
-
-    <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
-      <div class="aspect-[4/5] bg-[#f5eee7]">
-        <img src="images/p5.jpg" class="w-full h-full object-cover">
-      </div>
-      <div class="p-5">
-        <h3 class="font-black">Red Flower Tee</h3>
-        <p class="text-sm text-gray-500">Clean black · feminine detail</p>
-      </div>
-    </div>
-
-    <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
-      <div class="aspect-[4/5] bg-[#f5eee7]">
-        <img src="images/p6.jpg" class="w-full h-full object-cover">
-      </div>
-      <div class="p-5">
-        <h3 class="font-black">White Leopard 98 Tee</h3>
-        <p class="text-sm text-gray-500">Fresh white · casual cute</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="lookbook" class="px-5 md:px-12 py-20 bg-white">
-  <div class="grid md:grid-cols-2 gap-10 items-center">
+<!-- LOOKBOOK -->
+<section id="lookbook" class="px-5 md:px-10 py-14">
+  <div class="flex items-end justify-between mb-7">
     <div>
-      <p class="text-xs uppercase tracking-[0.35em] text-[#b88c63] mb-4">Lookbook</p>
-      <h2 class="text-4xl md:text-5xl font-black mb-6">Style It Like Indonesian Girls</h2>
-      <p class="text-gray-600 leading-relaxed mb-6">
-        Cocok dipadukan dengan jeans, rok mini, celana cargo, atau short pants. Gaya simple tapi tetap terlihat niat.
+      <h2 class="text-2xl md:text-3xl font-semibold uppercase tracking-wide">Lookbook</h2>
+      <p class="text-sm text-gray-500 mt-2">Simple outfit, stylish everyday.</p>
+    </div>
+    <span class="text-xs uppercase tracking-widest border-b border-black">View More</span>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="col-span-2 row-span-2">
+      <img src="images/p6-b.jpg" class="w-full h-full object-cover" />
+    </div>
+    <img src="images/p5-b.jpg" class="w-full h-full object-cover aspect-[3/4]" />
+    <img src="images/p4-b.jpg" class="w-full h-full object-cover aspect-[3/4]" />
+    <img src="images/p2-b.jpg" class="w-full h-full object-cover aspect-[3/4]" />
+    <img src="images/p1-b.jpg" class="w-full h-full object-cover aspect-[3/4]" />
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="px-5 md:px-10 py-16 border-t border-gray-100">
+  <div class="grid md:grid-cols-2 gap-8 items-center">
+    <img src="images/p4-b.jpg" class="w-full h-[420px] object-cover" />
+    <div>
+      <p class="text-xs uppercase tracking-[0.35em] text-[#9b765a] mb-4">About JW Studio</p>
+      <h2 class="text-4xl font-serif mb-5">Fashion harian untuk perempuan muda Indonesia.</h2>
+      <p class="text-gray-600 leading-relaxed">
+        JW Studio menghadirkan koleksi kaos yang simple, nyaman, dan mudah dipadukan.
+        Setiap desain dibuat untuk membantu kamu tampil effortless, fresh, dan percaya diri setiap hari.
       </p>
-      <div class="grid grid-cols-2 gap-4 text-sm">
-        <div class="bg-[#fffaf5] p-5 rounded-2xl">Hangout</div>
-        <div class="bg-[#fffaf5] p-5 rounded-2xl">Campus</div>
-        <div class="bg-[#fffaf5] p-5 rounded-2xl">Cafe</div>
-        <div class="bg-[#fffaf5] p-5 rounded-2xl">TikTok OOTD</div>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-2 gap-4">
-      <div class="rounded-3xl overflow-hidden bg-[#f5eee7]">
-        <img src="images/p5.jpg" class="w-full h-full object-cover">
-      </div>
-      <div class="rounded-3xl overflow-hidden bg-[#f5eee7] mt-10">
-        <img src="images/p4.jpg" class="w-full h-full object-cover">
-      </div>
     </div>
   </div>
 </section>
 
-<section class="px-5 md:px-12 py-20 bg-[#f1e6dc]">
-  <div class="text-center mb-10">
-    <p class="text-xs uppercase tracking-[0.35em] text-[#8a674a] mb-3">Model Inspiration</p>
-    <h2 class="text-4xl md:text-5xl font-black">Fresh Girl Look</h2>
-    <p class="text-gray-600 mt-4">Untuk versi berikutnya, bagian ini bisa diganti dengan foto model asli.</p>
-  </div>
-
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="bg-white rounded-3xl overflow-hidden p-4">
-      <div class="aspect-[4/5] rounded-2xl bg-gradient-to-b from-[#f8dfcf] to-[#fffaf5] flex items-center justify-center text-center p-6">
-        <p class="font-bold text-gray-600">Model wearing<br>White Leopard Tee</p>
-      </div>
+<!-- FOOTER -->
+<footer class="bg-[#111] text-white px-5 md:px-10 py-10">
+  <div class="grid md:grid-cols-4 gap-8">
+    <div>
+      <h3 class="text-xl font-black">JW STUDIO</h3>
+      <p class="text-gray-400 text-sm mt-2">Fresh daily fashion for Indonesia.</p>
     </div>
-    <div class="bg-white rounded-3xl overflow-hidden p-4">
-      <div class="aspect-[4/5] rounded-2xl bg-gradient-to-b from-[#dbeeff] to-[#fffaf5] flex items-center justify-center text-center p-6">
-        <p class="font-bold text-gray-600">Model wearing<br>Sky Blue Tee</p>
-      </div>
+    <div>
+      <h4 class="text-sm font-semibold uppercase mb-3">Shop</h4>
+      <p class="text-gray-400 text-sm">New In</p>
+      <p class="text-gray-400 text-sm">Clothing</p>
+      <p class="text-gray-400 text-sm">Best Sellers</p>
     </div>
-    <div class="bg-white rounded-3xl overflow-hidden p-4">
-      <div class="aspect-[4/5] rounded-2xl bg-gradient-to-b from-[#eadbd1] to-[#fffaf5] flex items-center justify-center text-center p-6">
-        <p class="font-bold text-gray-600">Model wearing<br>Red Flower Tee</p>
-      </div>
+    <div>
+      <h4 class="text-sm font-semibold uppercase mb-3">Info</h4>
+      <p class="text-gray-400 text-sm">About</p>
+      <p class="text-gray-400 text-sm">Lookbook</p>
+      <p class="text-gray-400 text-sm">Size Guide</p>
     </div>
-  </div>
-</section>
-
-<section id="about" class="px-6 md:px-16 py-24 text-center">
-  <p class="text-xs uppercase tracking-[0.35em] text-[#b88c63] mb-4">About</p>
-  <h2 class="text-4xl md:text-5xl font-black mb-6">JW Studio</h2>
-  <p class="max-w-2xl mx-auto text-gray-600 leading-relaxed">
-    JW Studio menghadirkan fashion harian untuk perempuan muda Indonesia.
-    Desainnya simple, nyaman, mudah dipadukan, dan tetap terlihat stylish untuk aktivitas sehari-hari.
-  </p>
-</section>
-
-<footer class="bg-[#1f1f1f] text-white px-6 md:px-12 py-10 flex flex-col md:flex-row justify-between gap-4">
-  <div>
-    <h3 class="font-black text-xl">JW STUDIO</h3>
-    <p class="text-gray-400 text-sm">Fresh daily fashion for Indonesia.</p>
-  </div>
-  <div class="text-sm text-gray-400">
-    Instagram · TikTok · Lookbook
+    <div>
+      <h4 class="text-sm font-semibold uppercase mb-3">Social</h4>
+      <p class="text-gray-400 text-sm">Instagram · TikTok · WhatsApp</p>
+    </div>
   </div>
 </footer>
 
