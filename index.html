@@ -13,14 +13,14 @@ body{
     color:#111;
 }
 
-/* 顶部 */
-.header{
+/* NAV */
+.nav{
     position:fixed;
     width:100%;
     top:0;
     display:flex;
     justify-content:space-between;
-    padding:20px 40px;
+    padding:20px 50px;
     font-size:12px;
     letter-spacing:2px;
     background:white;
@@ -30,10 +30,11 @@ body{
 /* HERO */
 .hero{
     height:100vh;
+    position:relative;
     display:flex;
     align-items:center;
     justify-content:center;
-    position:relative;
+    overflow:hidden;
 }
 
 .hero img{
@@ -43,15 +44,15 @@ body{
     object-fit:cover;
 }
 
-/* 淡遮罩（更高级） */
+/* FOG关键：非常淡的遮罩 */
 .hero::after{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.25);
+    background:rgba(0,0,0,0.18);
 }
 
-/* 文案 */
+/* 中心文案 */
 .hero-text{
     position:relative;
     z-index:2;
@@ -60,90 +61,87 @@ body{
 }
 
 .hero-text h1{
-    font-size:72px;
+    font-size:80px;
     font-weight:300;
-    letter-spacing:2px;
+    letter-spacing:4px;
     margin:0;
 }
 
 .hero-text p{
-    margin-top:15px;
-    font-size:14px;
-    opacity:0.8;
-    letter-spacing:1px;
+    margin-top:12px;
+    font-size:12px;
+    letter-spacing:3px;
+    opacity:0.85;
 }
 
 .btn{
-    margin-top:25px;
+    margin-top:20px;
     display:inline-block;
-    padding:12px 30px;
+    padding:10px 26px;
     border:1px solid white;
     color:white;
     text-decoration:none;
-    font-size:12px;
+    font-size:11px;
+    letter-spacing:2px;
 }
 
-/* SECTION 标题 */
+/* SECTION */
 .section{
-    padding:120px 80px;
+    padding:160px 120px;
 }
 
-.section-title{
-    font-size:14px;
+/* 标题 */
+.label{
+    font-size:11px;
     letter-spacing:3px;
     margin-bottom:40px;
+    color:#888;
 }
 
-/* 商品（画廊风🔥） */
-.product{
-    margin-bottom:120px;
+/* GRID（极简） */
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:100px;
 }
 
+/* PRODUCT */
 .product img{
     width:100%;
-    display:block;
 }
 
-/* hover微变化（更克制） */
+/* hover极轻（FOG风） */
 .product:hover img{
-    opacity:0.9;
+    opacity:0.92;
+    transition:0.4s;
 }
 
-/* 产品信息 */
-.product-info{
+/* INFO */
+.info{
     margin-top:10px;
     display:flex;
     justify-content:space-between;
-    font-size:13px;
+    font-size:12px;
+    letter-spacing:1px;
 }
 
-/* 左右错位布局（高级关键🔥） */
-.layout{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
-}
-
-.product:nth-child(2){
-    margin-top:120px;
-}
-
-/* LOOKBOOK */
+/* LOOKBOOK（整屏） */
 .lookbook{
-    padding:120px 80px;
+    height:90vh;
+    margin-top:120px;
 }
 
 .lookbook img{
     width:100%;
-    height:80vh;
+    height:100%;
     object-fit:cover;
 }
 
 /* FOOTER */
 .footer{
-    padding:80px;
+    padding:100px;
     text-align:center;
-    font-size:12px;
+    font-size:11px;
     letter-spacing:2px;
     color:#777;
 }
@@ -153,7 +151,7 @@ body{
 
 <body>
 
-<div class="header">
+<div class="nav">
     <div>JW STUDIO</div>
     <div>COLLECTION</div>
 </div>
@@ -171,25 +169,23 @@ body{
 <!-- COLLECTION -->
 <section id="collection" class="section">
 
-    <div class="section-title">COLLECTION</div>
+    <div class="label">COLLECTION</div>
 
-    <div class="layout">
+    <div class="grid">
 
-        <!-- 产品1 -->
         <div class="product">
             <img src="p1-a.png">
-            <div class="product-info">
-                <span>One Shoulder Tee</span>
-                <span>Rp79.000</span>
+            <div class="info">
+                <span>ONE SHOULDER TEE</span>
+                <span>Rp129.000</span>
             </div>
         </div>
 
-        <!-- 产品2 -->
         <div class="product">
             <img src="p2-a.png">
-            <div class="product-info">
-                <span>Street Graphic Tee</span>
-                <span>Rp109.000</span>
+            <div class="info">
+                <span>GRAPHIC TEE</span>
+                <span>Rp139.000</span>
             </div>
         </div>
 
