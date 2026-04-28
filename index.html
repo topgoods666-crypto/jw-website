@@ -13,7 +13,7 @@ body {
     color: #111;
 }
 
-/* 顶部导航 */
+/* 顶部 */
 .header {
     position: fixed;
     width: 100%;
@@ -21,17 +21,17 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
     z-index: 10;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 1px;
 }
 
-/* HERO 主图 */
+/* HERO */
 .hero {
     position: relative;
-    height: 95vh;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -39,9 +39,16 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    animation: zoom 12s ease-in-out infinite alternate;
 }
 
-/* 渐变遮罩（关键高级感🔥） */
+/* 缓慢放大动画（高级感🔥） */
+@keyframes zoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.08); }
+}
+
+/* 渐变遮罩 */
 .hero::after {
     content: "";
     position: absolute;
@@ -49,7 +56,7 @@ body {
     background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1));
 }
 
-/* 主图文字 */
+/* 文案动画 */
 .hero-text {
     position: absolute;
     bottom: 15%;
@@ -57,11 +64,16 @@ body {
     color: white;
     z-index: 2;
     max-width: 400px;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 .hero-text h1 {
-    font-size: 56px;
-    font-weight: 600;
+    font-size: 60px;
     margin: 0;
     line-height: 1.1;
 }
@@ -86,8 +98,8 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    padding: 100px 60px;
+    gap: 50px;
+    padding: 120px 80px;
 }
 
 .card {
@@ -99,7 +111,7 @@ body {
 .card img {
     width: 100%;
     display: block;
-    transition: 0.4s;
+    transition: 0.5s;
 }
 
 .card img.hover {
@@ -117,9 +129,15 @@ body {
     opacity: 0;
 }
 
-/* 商品文字 */
+/* 悬浮放大（关键🔥） */
+.card:hover {
+    transform: scale(1.03);
+    transition: 0.4s;
+}
+
+/* 文案 */
 .title {
-    margin-top: 12px;
+    margin-top: 14px;
     font-size: 15px;
 }
 
@@ -127,23 +145,34 @@ body {
     color: #777;
     font-size: 13px;
 }
+
+/* 滚动出现动画 */
+.card {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.8s;
+}
 </style>
 
 </head>
 
 <body>
 
-<!-- 顶部 -->
 <div class="header">
     <div>JW STUDIO</div>
     <div>COLLECTION</div>
 </div>
 
-<!-- 主图 -->
+<!-- HERO -->
 <div class="hero">
     <img src="hero2.png">
     <div class="hero-text">
-        <h1>98 One Shoulder Tee</h1>
+        <h1>98 One Shoulder</h1>
         <p>Clean fit. Soft feel. Everyday style.</p>
         <a href="#collection" class="btn">SHOP NOW</a>
     </div>
@@ -152,7 +181,6 @@ body {
 <!-- 商品 -->
 <div id="collection" class="grid">
 
-    <!-- 商品1 -->
     <div class="card">
         <img src="p1-a.png" class="main">
         <img src="p1-b.png" class="hover">
@@ -160,7 +188,6 @@ body {
         <div class="price">Rp129.000</div>
     </div>
 
-    <!-- 商品2 -->
     <div class="card">
         <img src="p2-a.png" class="main">
         <img src="p2-b.png" class="hover">
@@ -169,6 +196,20 @@ body {
     </div>
 
 </div>
+
+<script>
+/* 滚动动画 */
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      card.classList.add('show');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
