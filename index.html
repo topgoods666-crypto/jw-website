@@ -1,207 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JW Studio</title>
-
-<style>
-body{
-    margin:0;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    background:#fff;
-    color:#111;
-}
-
-/* NAV */
-.nav{
-    position:fixed;
-    width:100%;
-    top:0;
-    display:flex;
-    justify-content:space-between;
-    padding:20px 50px;
-    font-size:12px;
-    letter-spacing:2px;
-    background:white;
-    z-index:10;
-}
-
-/* HERO */
-.hero{
-    height:100vh;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-}
-
-.hero img{
-    position:absolute;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-/* FOG关键：非常淡的遮罩 */
-.hero::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.18);
-}
-
-/* 中心文案 */
-.hero-text{
-    position:relative;
-    z-index:2;
-    color:white;
-    text-align:center;
-}
-
-.hero-text h1{
-    font-size:80px;
-    font-weight:300;
-    letter-spacing:4px;
-    margin:0;
-}
-
-.hero-text p{
-    margin-top:12px;
-    font-size:12px;
-    letter-spacing:3px;
-    opacity:0.85;
-}
-
-.btn{
-    margin-top:20px;
-    display:inline-block;
-    padding:10px 26px;
-    border:1px solid white;
-    color:white;
-    text-decoration:none;
-    font-size:11px;
-    letter-spacing:2px;
-}
-
-/* SECTION */
-.section{
-    padding:160px 120px;
-}
-
-/* 标题 */
-.label{
-    font-size:11px;
-    letter-spacing:3px;
-    margin-bottom:40px;
-    color:#888;
-}
-
-/* GRID（极简） */
-.grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:100px;
-}
-
-/* PRODUCT */
-.product img{
-    width:100%;
-}
-
-/* hover极轻（FOG风） */
-.product:hover img{
-    opacity:0.92;
-    transition:0.4s;
-}
-
-/* INFO */
-.info{
-    margin-top:10px;
-    display:flex;
-    justify-content:space-between;
-    font-size:12px;
-    letter-spacing:1px;
-}
-
-/* LOOKBOOK（整屏） */
-.lookbook{
-    height:90vh;
-    margin-top:120px;
-}
-
-.lookbook img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-/* FOOTER */
-.footer{
-    padding:100px;
-    text-align:center;
-    font-size:11px;
-    letter-spacing:2px;
-    color:#777;
-}
-</style>
-
+  <meta charset="UTF-8" />
+  <title>JW Studio | Womens Tops</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-[#f6f1eb] text-[#1b1713]">
 
-<div class="nav">
-    <div>JW STUDIO</div>
-    <div>COLLECTION</div>
-</div>
+<header class="fixed top-0 left-0 w-full z-50 bg-[#f6f1eb]/90 backdrop-blur border-b border-black/10">
+  <div class="h-16 px-5 md:px-12 flex items-center justify-between">
+    <div class="text-xl font-semibold tracking-[0.25em]">JW STUDIO</div>
+    <nav class="hidden md:flex gap-8 text-xs uppercase tracking-[0.25em]">
+      <a href="#collection">Collection</a>
+      <a href="#detail">Detail</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="text-xs uppercase tracking-[0.2em]">Indonesia</div>
+  </div>
+</header>
 
-<!-- HERO -->
-<section class="hero">
-    <img src="hero2.png">
-    <div class="hero-text">
-        <h1>98</h1>
-        <p>ONE SHOULDER TEE</p>
-        <a href="#collection" class="btn">SHOP</a>
+<section class="min-h-screen pt-16 grid md:grid-cols-2">
+  <div class="px-6 md:px-16 py-20 flex flex-col justify-center">
+    <p class="text-xs uppercase tracking-[0.35em] text-[#8b684b] mb-6">One Shoulder Series</p>
+    <h1 class="text-5xl md:text-7xl font-serif leading-none mb-8">
+      Simple<br>
+      Tapi Chic.
+    </h1>
+    <p class="text-lg md:text-xl uppercase tracking-[0.18em] mb-6">
+      Atasan One Shoulder
+    </p>
+    <p class="text-gray-600 max-w-md leading-relaxed">
+      Tampilan kasual yang tetap standout. Nyaman untuk gaya sehari-hari,
+      hangout, kuliah, jalan-jalan, atau sekadar santai.
+    </p>
+  </div>
+
+  <div class="relative min-h-[680px] bg-[#eadfd3] overflow-hidden">
+    <img src="images/hero.jpg" class="w-full h-full object-cover" />
+    <div class="absolute bottom-8 left-8 bg-[#f6f1eb]/90 px-6 py-5">
+      <p class="text-xs uppercase tracking-[0.3em] text-[#8b684b]">Sablon 98</p>
+      <p class="text-2xl font-serif">Tampil Kece Tanpa Usaha</p>
     </div>
+  </div>
 </section>
 
-<!-- COLLECTION -->
-<section id="collection" class="section">
+<section class="bg-[#1b1713] text-white py-4 overflow-hidden">
+  <div class="whitespace-nowrap text-sm md:text-xl tracking-[0.35em] uppercase">
+    Premium Cotton · One Shoulder · Soft Daily Wear · Indonesian Girls ·
+  </div>
+</section>
 
-    <div class="label">COLLECTION</div>
+<section id="collection" class="px-5 md:px-12 py-24">
+  <div class="flex justify-between items-end mb-12">
+    <div>
+      <p class="text-xs uppercase tracking-[0.35em] text-[#8b684b] mb-4">Collection</p>
+      <h2 class="text-4xl md:text-6xl font-serif">Drop 01</h2>
+    </div>
+    <p class="hidden md:block max-w-sm text-gray-500 leading-relaxed">
+      Dua pilihan warna yang mudah dipadukan untuk gaya clean, feminin, dan effortless.
+    </p>
+  </div>
 
-    <div class="grid">
-
-        <div class="product">
-            <img src="p1-a.png">
-            <div class="info">
-                <span>ONE SHOULDER TEE</span>
-                <span>Rp129.000</span>
-            </div>
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="group bg-[#fffaf5]">
+      <div class="relative aspect-[4/5] overflow-hidden">
+        <img src="images/p1-a.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+        <img src="images/p1-b.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+      </div>
+      <div class="p-6 flex justify-between">
+        <div>
+          <h3 class="text-lg uppercase tracking-[0.2em]">White 98 One Shoulder</h3>
+          <p class="text-gray-500 mt-2">Fresh · clean · feminine</p>
         </div>
-
-        <div class="product">
-            <img src="p2-a.png">
-            <div class="info">
-                <span>GRAPHIC TEE</span>
-                <span>Rp139.000</span>
-            </div>
-        </div>
-
+        <p class="text-sm text-gray-500">M / L / XL</p>
+      </div>
     </div>
 
+    <div class="group bg-[#fffaf5]">
+      <div class="relative aspect-[4/5] overflow-hidden">
+        <img src="images/p2-a.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+        <img src="images/p2-b.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+      </div>
+      <div class="p-6 flex justify-between">
+        <div>
+          <h3 class="text-lg uppercase tracking-[0.2em]">Black 98 One Shoulder</h3>
+          <p class="text-gray-500 mt-2">Bold · casual · standout</p>
+        </div>
+        <p class="text-sm text-gray-500">M / L / XL</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- LOOKBOOK -->
-<section class="lookbook">
-    <img src="p1-b.png">
+<section id="detail" class="px-5 md:px-12 py-24 bg-[#fffaf5]">
+  <div class="grid md:grid-cols-2 gap-14 items-start">
+    <div>
+      <p class="text-xs uppercase tracking-[0.35em] text-[#8b684b] mb-4">Product Detail</p>
+      <h2 class="text-4xl md:text-6xl font-serif mb-8">
+        Nyaman,<br>Stylish,<br>Mudah Dipadukan.
+      </h2>
+      <p class="text-gray-600 leading-relaxed max-w-md">
+        Desain one shoulder memberi kesan stylish, feminin, dan kekinian.
+        Motif leopard 98 membuat tampilan lebih catching tanpa terlihat berlebihan.
+      </p>
+    </div>
+
+    <div class="grid gap-5">
+      <div class="grid grid-cols-[120px_1fr] gap-5 items-center border-b border-black/10 pb-5">
+        <img src="images/detail-1.jpg" class="w-full aspect-square object-cover bg-[#eee]">
+        <div>
+          <h3 class="uppercase tracking-[0.18em] font-semibold">Desain Sablon 98</h3>
+          <p class="text-gray-500 text-sm mt-2">Motif leopard yang trendi dan eye catching.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-[120px_1fr] gap-5 items-center border-b border-black/10 pb-5">
+        <img src="images/detail-2.jpg" class="w-full aspect-square object-cover bg-[#eee]">
+        <div>
+          <h3 class="uppercase tracking-[0.18em] font-semibold">One Shoulder</h3>
+          <p class="text-gray-500 text-sm mt-2">Bisa dipakai normal atau sedikit off-shoulder.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-[120px_1fr] gap-5 items-center">
+        <img src="images/detail-3.jpg" class="w-full aspect-square object-cover bg-[#eee]">
+        <div>
+          <h3 class="uppercase tracking-[0.18em] font-semibold">Bahan Lembut</h3>
+          <p class="text-gray-500 text-sm mt-2">Ringan, nyaman, dan adem dipakai seharian.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- FOOTER -->
-<div class="footer">
-    JW STUDIO — INDONESIA
-</div>
+<section class="px-5 md:px-12 py-24">
+  <div class="grid md:grid-cols-3 gap-8">
+    <div class="md:col-span-2">
+      <img src="images/lookbook-1.jpg" class="w-full h-[680px] object-cover">
+    </div>
+    <div class="flex flex-col justify-between gap-8">
+      <img src="images/lookbook-2.jpg" class="w-full h-[320px] object-cover">
+      <div class="bg-[#1b1713] text-white p-8">
+        <p class="text-xs uppercase tracking-[0.35em] text-[#c9b8a7] mb-4">Lookbook</p>
+        <h2 class="text-4xl font-serif">Effortless Daily Look.</h2>
+      </div>
+      <img src="images/lookbook-3.jpg" class="w-full h-[320px] object-cover">
+    </div>
+  </div>
+</section>
+
+<section id="about" class="px-6 md:px-16 py-24 text-center bg-[#1b1713] text-white">
+  <p class="text-xs uppercase tracking-[0.35em] text-[#c9b8a7] mb-5">About JW Studio</p>
+  <h2 class="text-4xl md:text-6xl font-serif mb-8">Daily fashion for Indonesian girls.</h2>
+  <p class="max-w-2xl mx-auto text-gray-300 leading-relaxed">
+    JW Studio menghadirkan atasan harian yang simple, nyaman, dan tetap stylish.
+    Dibuat untuk perempuan muda yang ingin tampil effortless dalam aktivitas sehari-hari.
+  </p>
+</section>
+
+<footer class="px-6 md:px-12 py-10 bg-[#f6f1eb] flex flex-col md:flex-row justify-between gap-4 text-sm">
+  <div>
+    <h3 class="uppercase tracking-[0.25em] font-semibold">JW Studio</h3>
+    <p class="text-gray-500 mt-2">Fresh daily fashion for Indonesia.</p>
+  </div>
+  <div class="text-gray-500">Instagram · TikTok · Lookbook</div>
+</footer>
 
 </body>
 </html>
